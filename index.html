@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonjour Bakes - Tempat Pulang Untuk Rasa Manis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">Bonjour Bakes<span></span></a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Beranda</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
+            
+<div class="nav-right">
+    <button onclick="processOrder()" class="btn-order" style="border:none; cursor:pointer;">Pesan Sekarang</button>
+    <div class="hamburger">...</div>
+</div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Temukan Kehangatan<br>Di Setiap Gigitan</h1>
+            <p>Dibuat dari bahan berkualitas premium dengan resep tradisional. Rasakan kelembutan terbaik.</p>
+            <a href="#menu" class="btn-hero">Lihat Menu Spesial</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Bahan Alami</h3>
+                    <p>Bahan organik bebas pengawet.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Fresh Daily</h3>
+                    <p>Panggang setiap pagi.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Gratis Ongkir</h3>
+                    <p>Area kota tertentu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Menu Andalan</h2>
+                <p>Pilihan roti paling laris bulan ini</p>
+            </div>
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-item">
+                    <img src="assets/Garlic-Butter-Cloud.jpg" alt="Garlic Butter Cloud">
+                    <div class="menu-info">
+                        <h3>Garlic Butter Cloud</h3>
+                        <span class="price">Rp 35.000</span>
+                        <button class="btn-add" onclick="addToCart('Garlic Butter Cloud', 35000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="menu-item">
+                    <img src="assets/Berry-Crown-Brioche.jpg" alt="Berry Crown Brioche">
+                    <div class="menu-info">
+                        <h3>Berry Crown Brioche</h3>
+                        <span class="price">Rp 25.000</span>
+                        <button class="btn-add" onclick="addToCart('Berry Crown Brioche', 25000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="menu-item">
+                    <img src="assets/Chocolate-Almond-Croissants.jpg" alt="Chocolate Almond Croissants">
+                    <div class="menu-info">
+                        <h3>Chocolate Almond Croissants</h3>
+                        <span class="price">Rp 45.000</span>
+                        <button class="btn-add" onclick="addToCart('Chocolate Almond Croissants', 45000)">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="menu.html" class="btn-hero" style="background: var(--dark);">Lihat Semua Menu &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="assets/The-Bakers-Embrace.jpg" alt="Baker">
+                </div>
+                <div class="about-content">
+                    <h2>Bonjour Bakes – Sentuhan Kelezatan Klasik di Setiap Genggaman.</h2>
+                    <p>Terinspirasi dari aroma toko roti tradisional yang memikat,
+                         Bonjour Bakes hadir membawa keajaiban panggangan berkualitas ke meja makan Anda.
+                          Dari tekstur lembut Garlic Butter Cloud, manisnya Berry Crown Brioche, hingga renyahnya Golden Hour Tart, 
+                          kami memadukan teknik terbaik dengan bahan-bahan premium yang terjamin mutunya. Kami berkomitmen untuk tidak hanya menyajikan rasa yang memanjakan lidah, tetapi juga visual yang cantik untuk menyempurnakan hari-hari Anda. Bonjour, and let’s bake your day better!</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 100% Bahan Alami</li>
+                        <li><i class="fas fa-check"></i> Chef Berpengalaman</li>
+                        <li><i class="fas fa-check"></i> Harga Terjangkau</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Bonjour Bakes.</h3>
+                    <p>Roti segar untuk kebahagiaanmu setiap hari.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/bonjourbakes.journal?igsh=bWpzNGphaXZuY3d6"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/qr/K4376BWZHBKWC1"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#menu">Roti/a></li>
+                        <li><a href="#menu">Pastry</a></li>
+                        <li><a href="#menu">Kue</a></li>
+                        </ul><li><a href="#menu">Minuman</a></li>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Sumedang, Indonesia</li>
+                        <li><i class="fas fa-phone"></i> +62 852-2248-3712</li>
+                        <li><i class="fas fa-envelope"></i> BonjourBakes@Gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Bonjour Bakes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
