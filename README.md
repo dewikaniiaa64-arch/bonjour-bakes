@@ -28,7 +28,7 @@ https://bonjourbakes.netlify.app (Jika sudah di-deploy)
 
 ## 📞 Kontak
 - Instagram: @bonjourbakes.journal
-- WhatsApp: +62 812 3456 7890
+- WhatsApp: +62 852-2248-3712
 - Lokasi: Sumedang, Indonesia
 
 ---
