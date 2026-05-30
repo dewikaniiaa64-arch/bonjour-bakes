@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lengkap - Bonjour Bakes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+   
+    <style>
+        
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .cat-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .cat-btn.active, .cat-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER  -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">Bonjour Bakes<span></span></a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu Lengkap</a></li>
+                    <li><a href="index.html#about" class="nav-link">Tentang</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
+                </ul>
+                <div class="nav-right">
+                    <button onclick="processOrder()" class="btn-order" style="border:none; cursor:pointer;">Pesan Sekarang</button>
+                    <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- TITLE SECTION -->
+    <section style="padding: 120px 0 50px; background: var(--secondary); text-align: center;">
+        <div class="container">
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Katalog Produk Lengkap</h1>
+            <p>Pilih semua produk favoritmu</p>
+        </div>
+    </section>
+
+    <!-- MENU SECTION LENGKAP -->
+    <section class="menu-section" style="padding: 50px 0;">
+        <div class="container">
+            
+           <div class="category-filter">
+    <button class="cat-btn active" onclick="filterMenu('all', this)">Semua</button>
+    <button class="cat-btn" onclick="filterMenu('roti', this)">Roti</button>
+    <button class="cat-btn" onclick="filterMenu('pastry', this)">Pastry</button>
+    <button class="cat-btn" onclick="filterMenu('kue', this)">Kue</button>
+    <button class="cat-btn" onclick="filterMenu('minuman', this)">Minuman</button>
+</div>
+            <div class="menu-grid">
+                <!-- === KATEGORI ROTI === -->
+                  <!-- Item 1 -->
+                    <div class="menu-item" data-category="Roti">
+                    <img src="assets/Garlic-Butter-Cloud.png" alt="Garlic Butter Cloud">
+                    <div class="menu-info">
+                        <h3>Garlic Butter Cloud</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Roti lembut dengan butter garlic.</p>
+                        <span class="price">Rp 35.000</span>
+                        <button class="btn-add" onclick="addToCart('Garlic Butter Cloud', 35000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="menu-item" data-category="Roti">
+                    <img src="assets/Berry-Crown-Brioche.jpg" alt="Berry Crown Brioche">
+                    <div class="menu-info">
+                        <h3>Berry Crown Brioche</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Brioche dengan isian berry.</p>
+                        <span class="price">Rp 25.000</span>
+                        <button class="btn-add" onclick="addToCart('Berry Crown Brioche', 25000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="menu-item" data-category="Roti">
+                    <img src="assets/Savoury-Sausage-Boat.jpg" alt="Savoury Sausage Boat">
+                    <div class="menu-info">
+                        <h3>Savoury Sausage Boat</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Roti lembut berbentuk perahu dengan sosis premium yang juicy di tengahnya.</p>
+                        <span class="price">Rp 35.000</span>
+                        <button class="btn-add" onclick="addToCart('Savoury Sausage Boat', 35000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="menu-item" data-category="Roti">
+                    <img src="assets/Creamy-Corn-Sunshine.jpg" alt="Creamy Corn Sunshine">
+                    <div class="menu-info">
+                        <h3>Creamy Corn Sunshine</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Roti manis nan empuk dengan isian pipilan jagung manis yang melimpah Creamy Corn Sunshine.</p>
+                        <span class="price">Rp 30.000</span>
+                        <button class="btn-add" onclick="addToCart('Creamy Corn Sunshine', 30000)">Tambah</button>
+                    </div>
+                </div>
+                 <!-- Item 5 -->
+                <div class="menu-item" data-category="Roti">
+                    <img src="assets/signature-Salted-Butter-Roll.png" alt="Signature Salted Butter Roll">
+                    <div class="menu-info">
+                        <h3>Signature Salted Butter Roll</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Roti gulung mentega khas Bonjour Bakes dengan tekstur luar yang renyah.</p>
+                        <span class="price">Rp 40.000</span>
+                        <button class="btn-add" onclick="addToCart('signature Salted Butter Roll', 40000)">Tambah</button>
+                    </div>
+                </div>
+                
+                <!-- === KATEGORI PASTRY === -->
+                <!-- Item 1 -->
+                <div class="menu-item" data-category="Pastry">
+                    <img src="assets/Pistachio-Dream-Croissant.jpg" alt="Pistachio Dream Croissant">
+                    <div class="menu-info">
+                        <h3>Pistachio Dream Croissant</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Croissant mentega klasik prancis yang dibelah dan diisi melimpah dengan whipped cream lembut rasa pistachio yang gurih-manis. </p>
+                        <span class="price">Rp 50.000</span>
+                        <button class="btn-add" onclick="addToCart('Pistachio Dream Croissant', 50000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="menu-item" data-category="Pastry">
+                    <img src="assets/Chocolate-Almond-Croissants.png" alt="Chocolate Almond Croissants">
+                    <div class="menu-info">
+                        <h3>Choco Almond Croissants</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Croissant cokelat almond.</p>
+                        <span class="price">Rp 45.000</span>
+                        <button class="btn-add" onclick="addToCart('Chocolate Almond Croissants', 45000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="menu-item" data-category="Pastry">
+                    <img src="assets/Strawberry-Gloss-Danish.jpg" alt="Strawberry Gloss Danish">
+                    <div class="menu-info">
+                        <h3>Strawberry Gloss Danish</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Danish strawberry glaze.</p>
+                        <span class="price">Rp 40.000</span>
+                        <button class="btn-add" onclick="addToCart('Strawberry Gloss Danish', 40000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="menu-item" data-category="Pastry">
+                    <img src="assets/Blueberry-Velvet-Croissant.jpg" alt="Blueberry Velvet Croissant">
+                    <div class="menu-info">
+                        <h3>Blueberry Velvet Croissant</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Croissant Pastry berlapis yang renyah dan ringan, diisi dengan kombinasi kontras yang sempurna antara creme chantilly yang lembut.</p>
+                        <span class="price">Rp 45.000</span>
+                        <button class="btn-add" onclick="addToCart('Blueberry Velvet Croissant', 45000)">Tambah</button>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="menu-item" data-category="Pastry">
+                    <img src="assets/Duo-Cromboloni.jpg" alt="Duo Cromboloni">
+                    <div class="menu-info">
+                        <h3>Duo Cromboloni</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Perpaduan harmonis antara kerenyahan kuadrat dari flaky pastry melingkar yang viral.  </p>
+                        <span class="price">Rp 55.000</span>
+                        <button class="btn-add" onclick="addToCart('Duo Cromboloni', 55000)">Tambah</button>
+                    </div>
+                </div>
+
+                <!-- === KATEGORI KUE === -->
+                <!-- Item 1 -->
+                <div class="menu-item" data-category="Kue">
+                    <img src="assets/Golden-Hour-Tart.jpg" alt="Golden Hour Tart">
+                    <div class="menu-info">
+                        <h3>Golden Hour Tart</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Tart creamy favorit.</p>
+                        <span class="price">Rp 18.000</span>
+                        <button class="btn-add" onclick="addToCart('Golden Hour Tart', 18000)">Tambah</button>
+                    </div>
+                </div>
+                 <!-- Item 2  -->
+                <div class="menu-item" data-category="Kue">
+                    <img src="assets/Banoffee-Caramel-Cream-Pie.jpg" alt="Banoffee Caramel Cream Pie">
+                    <div class="menu-info">
+                        <h3>Banoffee Caramel Cream Pie</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Pai berlapis pisang segar, krim tebal, dan siraman saus karamel pekat yang manis-gurih di atas remahan biskuit. </p>
+                        <span class="price">Rp 40.000</span>
+                        <button class="btn-add" onclick="addToCart('Banoffee Caramel Cream Pie', 40000)">Tambah</button>
+                    </div>
+                </div>
+                  <!-- Item 3  -->
+                <div class="menu-item" data-category="Kue">
+                    <img src="assets/Sunny-Lemon-Chiffon-Cake.jpg" alt="Sunny Lemon Chiffon Cake">
+                    <div class="menu-info">
+                        <h3>Sunny Lemon Chiffon Cake</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Kue sifon yang super lembut dan ringan dengan aroma lemon segar, dilapisi krim lemon kuning cerah dan hiasan irisan lemon segar.</p>
+                        <span class="price">Rp 50.000</span>
+                        <button class="btn-add" onclick="addToCart('Sunny Lemon Chiffon Cake', 50000)">Tambah</button>
+                    </div>
+                </div>
+                 <!-- Item 4  -->
+                <div class="menu-item" data-category="Kue">
+                    <img src="assets/Zesty-Lemon-Blueberry-Tart.jpg" alt="Zesty Lemon Blueberry Tart">
+                    <div class="menu-info">
+                        <h3>Zesty Lemon Blueberry Tart</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Tart renyah dengan isian krim lemon yang segar dan asam-manis.</p>
+                        <span class="price">Rp 35.000</span>
+                        <button class="btn-add" onclick="addToCart('Zesty Lemon Blueberry Tart', 35000)">Tambah</button>
+                    </div>
+                </div>
+                 <!-- Item 5 -->
+                <div class="menu-item" data-category="Kue">
+                    <img src="assets/Strawberry-Fudge-Chocolate-Cake.jpg" alt="Strawberry Fudge Chocolate Cake">
+                    <div class="menu-info">
+                        <h3>Strawberry Fudge Chocolate Cake</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">  Kue spons cokelat pekat berlapis krim cokelat lembut dan potongan stroberi segar, disiram chocolate ganache yang lumer.</p>
+                        <span class="price">Rp 30.000</span>
+                        <button class="btn-add" onclick="addToCart('Strawberry Fudge Chocolate Cake', 30000)">Tambah</button>
+                    </div>
+                </div>
+
+                 <!-- === KATEGORI MINUMAN === -->
+                <!-- Item 1 -->
+                <div class="menu-item" data-category="Minuman">
+                    <img src="assets/Iced-Matcha-Latte.jpg" alt="Iced Matcha Latte">
+                    <div class="menu-info">
+                        <h3>Iced Matcha Latte</h3>
+                        <p style="font-size: 0.8rem; color: var(--gray);">Tart creamy favorit.</p>
+                        <span class="price">Rp 25.000</span>
+                        <button class="btn-add" onclick="addToCart('Iced Matcha Latte', 25000)">Tambah</button>
+                    </div>
+                </div>
+                 <!-- Item 2 -->
+                <div class="menu-item" data-category="Minuman">
+                    <img src="assets/Creamy-Iced-Latte.jpg" alt="Creamy Iced Latte">
+                    <div class="menu-info">
+                        <h3>Creamy Iced Latte</h3>
+                        <span class="price">Rp 18.000</span>
+                        <button class="btn-add" onclick="addToCart('Creamy Iced Latte', 18000)">Tambah</button>
+                    </div>
+                </div>
+                  <!-- Item 3 -->
+                <div class="menu-item" data-category="Minuman">
+                    <img src="assets/Classic-Lemonade-Sparkler.jpg" alt="Classic Lemonade Sparkler">
+                    <div class="menu-info">
+                        <h3>Classic Lemonade Sparkler</h3>
+                        <span class="price">Rp 20.000</span>
+                        <button class="btn-add" onclick="addToCart('Classic Lemonade Sparkler', 20000)">Tambah</button>
+                    </div>
+                </div>
+                   <!-- Item 4 -->
+                <div class="menu-item" data-category="Minuman">
+                    <img src="assets/Blue-Ocean-Fizz.jpg" alt="Blue Ocean Fizz">
+                    <div class="menu-info">
+                        <h3>Blue Ocean Fizz</h3>
+                        <span class="price">Rp 20.000</span>
+                        <button class="btn-add" onclick="addToCart('Blue Ocean Fizz', 20000)">Tambah</button>
+                    </div>
+                </div>
+                  <!-- Item 5 -->
+                <div class="menu-item" data-category="Minuman">
+                    <img src="assets/Strawberry-Fields-Milkshake.jpg" alt="Strawberry Fields Milkshake">
+                    <div class="menu-info">
+                        <h3>Strawberry Fields Milkshake</h3>
+                        <span class="price">Rp 30.000</span>
+                        <button class="btn-add" onclick="addToCart('Strawberry Fields Milkshake', 30000)">Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Bonjour Bakes.</h3>
+                    <p>Roti segar untuk kebahagiaanmu setiap hari.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/bonjourbakes.journal?igsh=bWpzNGphaXZuY3d6"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/qr/K4376BWZHBKWC1"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#menu">Roti Tawar</a></li>
+                        <li><a href="#menu">Pastry</a></li>
+                        <li><a href="#menu">Kue Ulang Tahun</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Sumedang, Indonesia</li>
+                        <li><i class="fas fa-phone"></i> +62 812 3456 7890</li>
+                        <li><i class="fas fa-envelope"></i> BonjourBakes@Gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Bonjour Bakes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+            <!-- SCRIPT FILTER -->
+    <script>
+    function filterMenu(category, btnElement) {
+        const items = document.querySelectorAll('.menu-item');
+        
+        items.forEach(item => {
+          
+            let itemCategory = item.getAttribute('data-category').toLowerCase();
+            
+            if (category === 'all') {
+                item.style.display = 'block';
+            } else {
+                if (itemCategory === category.toLowerCase()) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        });
+
+        
+        document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+        btnElement.classList.add('active');
+    }
+    </script>
+</body>
+</body>
+</html>
